@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenHorizon - 跨境园艺产品电商平台</title>
+    <style>
+        /* 符合毕业设计规范的全局样式 */
+        :root {
+            --primary-color: #27ae60;
+            --dark-color: #2c3e50;
+            --light-bg: #f4f7f6;
+            --accent-color: #e67e22;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: "Microsoft YaHei", sans-serif; line-height: 1.6; background: var(--light-bg); color: #333; }
+
+        /* 导航栏 */
+        header { background: var(--dark-color); color: #fff; padding: 15px 5%; position: sticky; top: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 24px; font-weight: bold; color: var(--primary-color); }
+        nav ul { list-style: none; display: flex; }
+        nav ul li { margin-left: 25px; }
+        nav ul li a { color: #fff; text-decoration: none; font-size: 14px; transition: 0.3s; }
+        nav ul li a:hover { color: var(--primary-color); }
+
+        /* 英雄横幅区 */
+        .hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1200&q=80'); height: 450px; background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: #fff; padding: 0 20px; }
+        .hero h1 { font-size: 40px; margin-bottom: 15px; }
+        .hero p { font-size: 18px; max-width: 600px; margin-bottom: 25px; }
+        .cta-btn { background: var(--primary-color); color: white; padding: 12px 35px; text-decoration: none; border-radius: 30px; font-weight: bold; transition: 0.3s; }
+        .cta-btn:hover { background: #219150; transform: translateY(-3px); }
+
+        /* 产品展示区 */
+        .container { max-width: 1100px; margin: 50px auto; padding: 0 20px; }
+        .section-title { text-align: center; margin-bottom: 40px; font-family: "微软雅黑"; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .product-card { background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: 0.3s; border-bottom: 4px solid transparent; }
+        .product-card:hover { transform: translateY(-10px); border-bottom-color: var(--primary-color); }
+        .product-img { height: 220px; background: #ddd; display: flex; align-items: center; justify-content: center; font-size: 14px; color: #888; overflow: hidden; }
+        .product-img img { width: 100%; height: 100%; object-fit: cover; }
+        .product-info { padding: 20px; }
+        .product-info h3 { margin-bottom: 10px; font-size: 18px; }
+        .product-info p { color: #777; font-size: 13px; margin-bottom: 15px; }
+        .price-row { display: flex; justify-content: space-between; align-items: center; }
+        .price { font-size: 20px; font-weight: bold; color: var(--accent-color); }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            header { flex-direction: column; padding: 10px; }
+            nav ul { margin-top: 15px; }
+            .hero h1 { font-size: 28px; }
+        }
+
+        /* 页脚 */
+        footer { background: var(--dark-color); color: #888; text-align: center; padding: 40px 20px; margin-top: 50px; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">GreenHorizon</div>
+        <nav>
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">产品目录</a></li>
+                <li><a href="#">物流查询</a></li>
+                <li><a href="#">关于我们</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>专业跨境园艺解决方案</h1>
+        <p>为新加坡及马来西亚市场量身定制，提供高强度金属花园储物棚与全自动清洁工具。</p>
+        <a href="#" class="cta-btn">查看2026春季目录</a>
+    </section>
+
+    <div class="container">
+        <h2 class="section-title">核心产品线</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-img"><img src="https://images.unsplash.com/photo-1617103996702-96ff29b1c467?auto=format&fit=crop&w=400&q=80" alt="金属储物棚"></div>
+                <div class="product-info">
+                    <h3>金属重型花园储物棚</h3>
+                    <p>采用镀锌钢板，防腐蚀抗台风设计，适合东南亚潮湿气候。</p>
+                    <div class="price-row">
+                        <span class="price">$349.00</span>
+                        <a href="#" style="color: var(--primary-color); text-decoration: none; font-size: 14px;">详情 ></a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img"><img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=400&q=80" alt="户外凉亭"></div>
+                <div class="product-info">
+                    <h3>铝合金电动百叶凉亭</h3>
+                    <p>智能遮阳防雨，提升庭院生活品质，跨境爆款单品。</p>
+                    <div class="price-row">
+                        <span class="price">$1,299.00</span>
+                        <a href="#" style="color: var(--primary-color); text-decoration: none; font-size: 14px;">详情 ></a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img"><img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=400&q=80" alt="清洁刷"></div>
+                <div class="product-info">
+                    <h3>无绳高压园艺清洁刷</h3>
+                    <p>适配多种刷头，轻松解决户外地砖及泳池边缝污垢。</p>
+                    <div class="price-row">
+                        <span class="price">$89.00</span>
+                        <a href="#" style="color: var(--primary-color); text-decoration: none; font-size: 14px;">详情 ></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>本项目为 许昌职业技术学院 人工智能学院 2026届毕业设计作品</p>
+        <p>设计者：XXXX | 指导教师：XXXX</p>
+        <p style="margin-top: 10px;">&copy; 2026 GreenHorizon. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
